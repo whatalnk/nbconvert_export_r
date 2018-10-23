@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='nbconvert_exporter_r',
-    version='0.0.3',
+    version='0.0.4',
     description='Custom exporter of nbconvert for R language',
     author='whatalnk',
     url='https://github.com_whatalnk/nbconvert_exporter_r',
@@ -16,6 +16,9 @@ setup(
     entry_points={
         'nbconvert.exporters.script': [
             'R = nbconvert_exporter_r:RExporter'
+        ],
+        'nbconvert.exporters': [
+            'RNotebook = nbconvert_exporter_r:RNotebookExporter'
         ],
     }
 )
