@@ -4,11 +4,17 @@ Custom exporter of nbconvert for R kernel ([IRKernel](https://github.com/IRkerne
 
 ## Usage: 
 
+### R script (.R)
 ```
 jupyter nbconvert --debug --to=script my_notebook.ipynb
 ```
 
 Markdown cell and input cell number is exported as comment, like `--to=python`
+
+### R Notebook (.Rmd)
+```
+jupyter nbconvert --debug --to=RNotebook my_notebook.ipynb
+````
 
 ## Install
 
