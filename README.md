@@ -9,12 +9,14 @@ Custom exporter of nbconvert for R kernel ([IRKernel](https://github.com/IRkerne
 jupyter nbconvert --debug --to=script my_notebook.ipynb
 ```
 
-Markdown cell and input cell number is exported as comment, like `--to=python`
+Markdown cell and input cell number is exported as comment, like `--to=python`. 
 
 ### R Notebook (.Rmd)
 ```
 jupyter nbconvert --debug --to=RNotebook my_notebook.ipynb
 ````
+
+Code cells which has `"notshow" = true` in metadata are not in exported files. 
 
 ## Install
 

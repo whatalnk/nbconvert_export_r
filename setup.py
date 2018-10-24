@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='nbconvert_exporter_r',
-    version='0.0.4',
+    version='0.0.5',
     description='Custom exporter of nbconvert for R language',
     author='whatalnk',
     url='https://github.com_whatalnk/nbconvert_exporter_r',

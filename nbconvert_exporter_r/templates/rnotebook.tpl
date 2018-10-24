@@ -4,19 +4,21 @@
 title: "{{ resources['metadata']['name'] }}"
 output: html_notebook
 ---
-{%- endblock header -%}
+{% endblock header %}
 
-{% block in_prompt %}
-{% endblock in_prompt %}
+{%- block in_prompt -%}
+{%- endblock in_prompt -%}
 
-{% block output_prompt %}
+{%- block output_prompt -%}
 {%- endblock output_prompt %}
 
-{% block input %}
+{%- block input -%}
+{% if not cell.metadata.get('notshow') %}
 ```{r}
 {{ cell.source}}
 ```
-{% endblock input %}
+{% endif %}
+{%- endblock input -%}
 
 {% block error %}
 {% endblock error %}
@@ -25,11 +27,9 @@ output: html_notebook
 {% endblock traceback_line %}
 
 {% block execute_result %}
-
 {% block data_priority scoped %}
 {% endblock %}
 {% endblock execute_result %}
-
 
 {% block stream %}
 {% endblock stream %}
